@@ -13,7 +13,7 @@ RUN apk add --no-cache $depends\
  && git checkout -b $tag refs/tags/$tag\
  && pip install --no-cache-dir --upgrade pip\
  && pip install --no-cache-dir .\
- && pip install --no-cache-dir PyMySQL crudini python-memcached uwsgi "kombu<4.0.0"\
+ && pip install --no-cache-dir MySQL-python crudini python-memcached uwsgi "kombu<4.0.0"\
  && mkdir -p /etc/keystone\
  && mv etc/* /etc/keystone/\
  && mv /etc/keystone/keystone.conf.sample /etc/keystone/keystone.conf\
