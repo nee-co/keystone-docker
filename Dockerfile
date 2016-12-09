@@ -17,7 +17,7 @@ RUN apk add --no-cache $depends\
  && mkdir -p /etc/keystone\
  && mv etc/* /etc/keystone/\
  && mv /etc/keystone/keystone.conf.sample /etc/keystone/keystone.conf\
- && crudini --set catalog template_file /etc/keystone/default_catalog.templates /etc/keystone/keystone.conf\
+ && crudini --set /etc/keystone/keystone.conf catalog template_file /etc/keystone/default_catalog.templates\
  && sed -i "s/ admin_token_auth / /" /etc/keystone/keystone-paste.ini\
  && apk del --no-cache $make_depends\
  && rm -rf /opt/keystone
