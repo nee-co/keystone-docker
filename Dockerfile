@@ -11,9 +11,9 @@ RUN apk add --no-cache $depends\
  && apk add --no-cache $make_depends\
  && git clone $repository .\
  && git checkout -b $tag refs/tags/$tag\
- && pip install --upgrade pip\
- && pip install .\
- && pip install PyMySQL python-memcached uwsgi "kombu<4.0.0"\
+ && pip install --no-cache-dir --upgrade pip\
+ && pip install --no-cache-dir .\
+ && pip install --no-cache-dir PyMySQL python-memcached uwsgi "kombu<4.0.0"\
  && mkdir -p /etc/keystone\
  && mv etc/* /etc/keystone/\
  && mv /etc/keystone/keystone.conf.sample /etc/keystone/keystone.conf\
