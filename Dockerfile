@@ -25,6 +25,6 @@ ADD docker-entrypoint.sh /usr/local/bin
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD uwsgi --http :35357 --wsgi-file $(which keystone-wsgi-admin)
+CMD uwsgi --http :5000 --wsgi-file $(which keystone-wsgi-public)
 
 EXPOSE 5000 35357
