@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ARG depends="py-pip mariadb-client-libs"
-ARG make_depends="build-base git python-dev libffi-dev linux-headers mariadb-dev openssl-dev"
+ARG make_depends="build-base git libffi-dev linux-headers mariadb-dev openssl-dev python-dev"
 ARG repository="https://git.openstack.org/openstack/keystone.git"
 ARG tag="10.0.0"
 

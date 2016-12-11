@@ -21,12 +21,8 @@ services:
       OS_BOOTSTRAP_INTERNAL_URL: http://keystone:5000/v3
       KEYSTONE_DATABASE_CONNECTION: mysql://root:@keystone-database/keystone
       KEYSTONE_CACHE_HOST: keystone-cache:11211
-    links:
-      - keystone-cache
-      - keystone-database
     ports:
       - 5000
-      - 35357
     restart: always
 
   keystone-cache:
